@@ -1,0 +1,147 @@
+naming conventions for both files and folders:
+	the format of all names should be the same; to do so, copy the name of the previously saved file, and
+	make changes such that the format dosent change. for example, if the previous file was 
+	"The-Turing-virtual-machine-main.zip (saved on 3-22-2026)" stored in a archive folder that means the format is
+	(probably): 
+	{Required}[
+		{Required}[label stating "The-Turing-virtual-machine-main"]
+		{Required}[fix extension should be ".zip"]
+		{Required}[ SPACE (U+0020) ]
+		{Required}[U+0028 LEFT PARENTHESIS]
+		{Required}[label stating "saved on"]
+		{Required}[ SPACE (U+0020) ]
+		{Required}[  
+			{Required}[
+			date in month/day/year formats where the divider is "-"
+			]
+		]
+		{Required}[U+0029 RIGHT PARENTHESIS]
+	]
+	
+	
+
+    Now you can only change 
+	the date using the required date format in the case of such file name format. An example of changing this
+	particular file with the assumed format is:
+	"The-Turing-virtual-machine-main.zip (saved on 5-26-2027)"
+	In the case of this example, the format was correct, but always refer to the format described in the particular
+	folder instead of assuming it. The file describing the format in any particular format requiring format is:
+	"format conventions for this folder" with any file extension. The file's first line must be all the number of naming conventions, 
+	an optional name for each, the file following each convention, and the format itself.
+	format of the whole file is:
+	{Required}
+	[
+		{Required}
+		[
+			{Required}[ A label stating "Number of file naming conventions:" ] 
+			{Optional}[ LINE FEED (LF)  (U+0010) ]
+			{Required}[ SPACE (U+0020) ] 
+			{Required}[ number of file naming conventions ] 
+		]
+		{Optional}
+		[
+			{Required}[ LINE FEED (LF)  (U+0010) ]
+			{Required}[ A label stating "Names of each convention:" ] 
+			{Required}[ SPACE (U+0020) ] 
+			{Optional}[ LINE FEED (LF)  (U+0010) ]
+			{Required}[
+				names of EACH convention separated by {Required}[
+					{Required}[ SPACE (U+0020) ]
+					{Required}[ COMMA (U+002C) ]
+					{Required}[ SPACE (U+0020) ]
+					{Optional}[
+						[ LINE FEED (LF)  (U+0010) ]
+					]
+				]
+			] 
+		]
+		{Required}
+		[
+			{Required}[ LINE FEED (LF)  (U+0010) ]
+			{Required}[ A label stating "Usage of each convention:" ] 
+			{Required}[
+				Use of the file following the EACH convention separated by {Required}[
+					{Required}[ SPACE (U+0020) ]
+					{Required}[ COMMA (U+002C) ]
+					{Required}[ SPACE (U+0020) ]
+					{Optional}[
+						[ LINE FEED (LF)  (U+0010) ]
+					]
+				]
+			] 
+		]
+		{Required}
+		[
+			{Required}[ LINE FEED (LF)  (U+0010) ]
+			{Required}[ A label stating "each convention itself:" ] 
+			{Required}[ SPACE (U+0020) ]
+			{Required}[
+				each convention itself separated by {Required}[
+					{Required}[ SPACE (U+0020) ]
+					{Required}[ COMMA (U+002C) ]
+					{Required}[ SPACE (U+0020) ]
+					{Optional}[
+						[ LINE FEED (LF)  (U+0010) ]
+					]
+				]
+			] 
+		]
+	]
+	
+	notice how "names of EACH convention separated by" is not in [], that is because its a command that 
+	you have to follow. I hope, the examples above show that you have to use
+	{required}[ content ] or {optional}[ content ] to describe blocks of file convention
+	formats; the content can have another block nested in it, and even commands like 
+	"names of EACH convention separated by" have to be in the content section of a block.
+	Commands have the format 
+			{required}[
+				{required}[ command ]
+				{required}[ another block ]
+			]
+    The commands "names of EACH convention separated by" and "A label stating" follow this format.
+	You can also use the either block when describing file format conventions; which when used looks like this:
+	{either}[
+		[ SPACE (U+0020) ]
+		[ LINE FEED (LF)  (U+0010) ]
+	]
+	the content section of each block (including the either block) can have non white spaces
+	when you are describing in them, hence the avoid confusion, please use orders like "A label stating".
+	commands like "A label stating" are useful to explicitly state that there is no hidden meaning in what text to
+	write; all you have to do is to copy and past the text; these labels are very useful in avoiding confusion.
+	The keyword "command:" can be used to make a command explicit, for example: 
+	{Required}[ command: A label stating "each convention itself:" ]
+	if you want to use "command:" in the content block as text, then you have to put escape it using \, like this:
+	\command: A label stating "each convention itself:"
+	texts in the content section of a block can be assumed as anything by the reader so be very careful.
+	\ can be escaped using \\.
+	You should sometimes use [ SPACE (U+0020) ] instead of space in the text itself to make the reader 
+	more aware of the usage of spaces.
+	Every folder must have "format conventions for this folder" file.
+	if the folder has no format conventions then the file must be:
+		"Number of file naming conventions: 0
+		Usage of each convention: 
+		each convention itself: " 
+		example of another possible "format conventions for this folder" file:
+			Number of file naming conventions: 1
+			Names of each convention: Naming convention for all files
+			Usage of each convention: to save what my c and c++ notes looked like at the specified in time. 
+			each convention itself: {Required}[
+					{Required}[label stating "C-and-C-plus-plus-notes-main "]
+					{Required}[ SPACE (U+0020) ]
+					{Required}[U+0028 LEFT PARENTHESIS]
+					{Required}[  
+						{Required}[
+						date in month/day/year formats where the divider is "-"
+						]
+					]
+					{Required}[U+0029 Right PARENTHESIS]
+					{Required}[file extension should be ".zip"]
+				]
+
+storage conventions:
+	storage conventions for books:
+		1.For each book provide a different folder.
+		2.Always provide a "read me before reading the book.txt" for every book in that folder.
+		3.All books should be stored in the folder "books" and multiple books can be store in a sub folder, each
+		book in that sub folder must follow the same rules as all the other books.
+		4.Every folder must have "format conventions for this folder" file.
