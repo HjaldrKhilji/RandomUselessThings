@@ -1,6 +1,6 @@
 
 def get_3d_cordinates(i, value_to_assign):
-    value_to_assign= value_to_assign/1000000
+    value_to_assign= value_to_assign/1000000#100000000000000000000 is a quite usable number here, provide you are willing/can zoom deep enough and have a shape small enough. 
     if int(i/2)%2==1 or (i/2)==0:
         value_to_assign*=-1
     result= [0,0,0]
@@ -25,5 +25,4 @@ while i>-100:
     temp= current_fibonaci_sequence
     current_fibonaci_sequence= current_fibonaci_sequence+last_fibonaci_sequence
     last_fibonaci_sequence= temp
-
 
